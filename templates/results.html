@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+</style>
+<form>
+    {% if len(results)>0 %}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">News Text</th>
+                    <th scope="col">Source</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                    <tr>
+                        <td scope="row">{{result.news}}</td>
+                        <td scope="row">{{result.source}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h1>No neagtive news found</h1>
+    {% endif %}
+</form>
+</html>
